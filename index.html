@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Mp3 Player</title>
+</head>
+<body>
+    <div class="music-player">
+        <div class="song-title">
+            <p id="song-name">Song name will be displayed here</p>
+        </div>
+        <div class="song-image">
+            <section class="image">
+                <img src="songsImage/Friends.jpg" alt="image-title" id="songsImage">
+            </section>
+        </div>
+        <div class="song-slider">
+            <input type="range" id="seekSlider" min="0" step="1" value="0" onchange="seekSong()">
+            <span id="time-spent">00:00</span>
+            <span id="song-duration">00:00</span>
+        </div>
+        <div class="player-button">
+            <button class="previous" onclick="previous()"><i class="fas fa-backward"></i></button>
+            <button class="playOrPause" onclick="playOrPause()"><i class="fas fa-play" id="playOrPause"></i></button>
+            <button class="next" onclick="next()"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="song-volume-like">
+            <div class="volume">
+                <span><i class="fas fa-volume-up" id="volumeIcon"></i></span>
+                <input type="range" id="volume" min="0" max="100" step="0.01" value="50" onchange="adjustVolume()">
+            </div>
+            <span onclick="like()"><i class="far fa-heart" id="like"></i></span>
+        </div>
+    </div>
+    <script src="songs.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
