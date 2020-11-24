@@ -9,11 +9,13 @@ let volumeIcon = document.getElementById("volumeIcon");
 let likeIcon = document.getElementById("like");
 let musicPlayer = document.getElementById("music-player");
 
+
 let state = true;
 
 let song = new Audio();
 let currentSongIndex = 0;
 window.onload = playSongs;
+
 
 function playSongs(){
     song.src = songsDetails[currentSongIndex].audioSrc;
@@ -82,11 +84,26 @@ function adjustVolume(){
 function like(){
     if(state){
         likeIcon.className = "fas fa-heart";
-        likeIcon.style.fill = "red";
-        console.log(likeIcon.style.fill);
+        likeIcon.style.color = "red";
         state = false; 
     }else{
         likeIcon.className = "far fa-heart";
         state = true;
     }
+}
+function repeatSong(){
+    if(song.loop){
+        song.loop = false;
+    }else{
+        song.loop = true;
+    }
+}
+
+function shufleSongs(){
+    console.log("shufle Songs");
+    currentSongIndex = Math.floor(Math.random() * songsDetails.length);
+    song.src = songsDetails[currentSongIndex].audioSrc;
+    songsImage.src = songsDetails[currentSongIndex].imageSrc;
+    songsName.textContent = songsDetails[currentSongIndex].title;
+    song.play();
 }
