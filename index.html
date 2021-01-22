@@ -10,7 +10,9 @@
 <body>
     <div class="music-player">
         <div class="song-title">
-            <p id="song-name">Song name will be displayed here</p>
+            <marquee behavior="scroll" direction="">
+                <p id="song-name">Song name will be displayed here</p>
+            </marquee>
         </div>
         <div class="song-image">
             <section class="image">
@@ -23,11 +25,11 @@
             <span id="song-duration">00:00</span>
         </div>
         <div class="player-button">
-            <img src="./reshfule.png" alt="" onclick="shufleSongs()">
+            <img src="./shuffle.png" alt="" onclick="shufleSongs()" id="shufle">
             <button class="previous" onclick="previous()"><i class="fas fa-backward"></i></button>
             <button class="playOrPause" onclick="playOrPause()"><i class="fas fa-play" id="playOrPause"></i></button>
             <button class="next" onclick="next()"><i class="fas fa-forward"></i></button>
-            <img src="./repeat.jpg" alt="repeat icon" id="repeat" onclick="repeatSong()">
+            <img src="./repeat1.png" alt="repeat icon" id="repeat" onclick="repeatSong()">
         </div>
         <div class="song-volume-like">
             <div class="volume">

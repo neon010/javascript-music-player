@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
 body{
-    background-color: black;
+    background-image: linear-gradient(to right, #ED213A, #93291E) ;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -22,8 +22,8 @@ body{
 }
 .song-title #song-name{
     font-family: 'Flamenco', cursive;
-    font-size: 15px;
-    color: red;
+    font-size: 20px;
+    color: #fff;
 }
 .song-image{
     display: flex;
@@ -61,12 +61,13 @@ body{
     border: none;
     font-size: 1rem;
     outline: none;
+    cursor: pointer;
 }
-.player-button button:hover{
+.player-button button:active{
     background-color: blue;
 }
 .player-button button:focus{
-    border: 2px solid black;
+    border: 2px solid red;
 }
 .song-volume-like {
     margin: 10px 10px 8px 10px;
@@ -74,11 +75,33 @@ body{
     justify-content: space-between;
 }
 #repeat{
-    color: black;
-    background-color: transparent;
-    margin-left: 5px;
+    cursor: pointer;
 }
-
+#shufle{
+    cursor: pointer;
+}
+#repeat:active{
+    border-radius: 50%;
+}
+#shufle:active{
+    border-radius: 50%;
+}
+#repeat:focus{
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 10px;
+    opacity: 0.7;
+}
+#shufle:focus{
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    opacity: 0.7;
+}
+a:focus #repeat {border-bottom: 3px dashed red;}
 
 
 
